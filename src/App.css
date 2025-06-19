@@ -1,0 +1,141 @@
+/* src/App.css */
+:root {
+  --idealista-purple: #90278e;
+  --idealista-background: #f5f4f2;
+  --idealista-text-primary: #333333;
+  --idealista-text-secondary: #757575;
+  --idealista-border-color: #e0e0e0;
+  --idealista-blue-link: #0078b9;
+}
+
+body {
+  font-family: 'Roboto', 'Lato', sans-serif;
+  background-color: var(--idealista-background);
+  color: var(--idealista-text-primary);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Espaço no final da página para o botão fixo não cobrir o rodapé */
+  padding-bottom: 90px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.app-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.page-content {
+  padding: 0 16px;
+}
+
+.main-title-wrapper {
+  margin: 24px 0;
+}
+
+.main-title-wrapper h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.info-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--idealista-blue-link);
+  cursor: pointer;
+  text-decoration: none;
+}
+.info-link:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reservation-form {
+  flex: 1;
+  background-color: white;
+  padding: 24px;
+  border: 1px solid var(--idealista-border-color);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.additional-info {
+  flex: 1;
+  width: 100%;
+}
+
+/* --- Estilos para o botão fixo (Mobile First) --- */
+.continue-button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: #ffffff;
+  border-top: 1px solid var(--idealista-border-color);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.continue-button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--idealista-purple);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.continue-button:hover {
+  background-color: #7a2078;
+}
+
+
+/* --- Tablet & Desktop Styles --- */
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0; /* Remove o espaçamento extra em telas grandes */
+  }
+
+  .page-content {
+    padding: 0 16px;
+  }
+  
+  .main-content {
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .reservation-form {
+    flex: 0 1 58%;
+  }
+
+  .additional-info {
+    flex: 0 1 42%;
+  }
+  
+  /* Retorna o botão à sua posição normal dentro do formulário */
+  .continue-button-container {
+    position: static;
+    padding: 0;
+    margin-top: 24px;
+    border-top: none;
+    box-shadow: none;
+  }
+}

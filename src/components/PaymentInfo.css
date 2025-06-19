@@ -1,0 +1,19 @@
+/* src/components/PaymentInfo.css */
+.payment-info {
+  margin-bottom: 32px;
+}
+
+.payment-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.payment-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--idealista-text-secondary);
+  margin-top: 0;
+  margin-bottom: 12px;
+}

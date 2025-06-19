@@ -1,0 +1,44 @@
+/* src/components/CostDetails.css */
+.cost-details {
+  padding: 24px 0;
+  border-top: 1px solid var(--idealista-border-color);
+}
+
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.cost-item span:first-child {
+  color: var(--idealista-text-primary);
+}
+.cost-item span:last-child {
+  color: var(--idealista-text-primary);
+  font-weight: 500;
+}
+
+.cost-item .info-icon {
+  display: inline-block;
+  color: #fff;
+  background-color: var(--idealista-blue-link);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.total-cost {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  font-size: 18px;
+  font-weight: 700;
+}
